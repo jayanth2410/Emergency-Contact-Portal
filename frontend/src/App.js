@@ -13,6 +13,8 @@ import GeoTracking from "./pages/GeoTracking";
 import StudentDashboard from "./pages/StudentDashboard";
 import AdminDashboard from "./pages/AdminDashboard";
 import FloatingChatBot from "./pages/FloatingChatBot";
+import AuthPage from "./pages/AuthPage";
+import Dashboard from "./pages/Dashboard";
 
 const App = () => {
   return (
@@ -27,6 +29,8 @@ const App = () => {
         <Route path="/admin-notices" element={<AdminNotice />} />
         <Route path="/student-notices" element={<StudentNotices />} />
         <Route path="/sos" element={<SOS />} />
+        <Route path="/anal" element={<Dashboard/>}/>
+        <Route path="/login" element={<AuthPage/>}/>
         <Route path="/geo-tracking" element={<GeoTracking />} />
         <Route path="/contacts" element={<Contacts />} />
         <Route path="/admin-sos" element={<AdminSOS />} />

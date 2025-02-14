@@ -37,8 +37,13 @@ app.use("/api/emergency-contacts", emergencyContactRoutes);
 const locationRoutes = require("./routes/location");
 app.use("/api/locations", locationRoutes);
 
+//import the nearby routes
 const nearbyRoutes = require("./routes/nearby");
 app.use("/api/nearby", nearbyRoutes);
+
+//import the satics routes
+const statsRoutes = require("./routes/stats");
+app.use("/api/stats", statsRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
