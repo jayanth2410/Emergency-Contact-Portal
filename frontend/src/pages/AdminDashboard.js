@@ -62,7 +62,7 @@ const AdminDashboard = () => {
       }
     };
 
-    fetchStats();
+    fetchStats();  
   }, []);
 
   const handleMenu = (event) => {
