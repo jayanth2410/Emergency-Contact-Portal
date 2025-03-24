@@ -11,7 +11,7 @@ const AdminSOS = () => {
 
   const fetchAlerts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/sos");
+      const res = await axios.get("https://ecp-backend.onrender.com/api/sos");
       setAlerts(res.data);
     } catch (error) {
       console.error("Error fetching SOS alerts", error);
@@ -20,7 +20,7 @@ const AdminSOS = () => {
 
   const resolveAlert = async (id) => {
     try {
-      await axios.put(`http://localhost:5000/api/sos/${id}`, { status: "Resolved" });
+      await axios.put(`https://ecp-backend.onrender.com/api/sos/${id}`, { status: "Resolved" });
       fetchAlerts();
     } catch (error) {
       console.error("Error updating SOS status", error);
@@ -29,7 +29,7 @@ const AdminSOS = () => {
 
   const deleteAlert = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/sos/${id}`);
+      await axios.delete(`https://ecp-backend.onrender.com/api/sos/${id}`);
       fetchAlerts();
     } catch (error) {
       console.error("Error deleting SOS alert", error);

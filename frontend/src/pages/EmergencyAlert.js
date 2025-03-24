@@ -12,7 +12,7 @@ const EmergencyAlert = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/emergency-alerts", form);
+      await axios.post("https://ecp-backend.onrender.com/api/emergency-alerts", form);
       alert("🚨 Emergency alert submitted successfully!");
       setForm({ studentName: "", location: "" });
     } catch (error) {

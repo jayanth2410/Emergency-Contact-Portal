@@ -16,7 +16,7 @@ const AdminNotice = () => {
 
   const fetchNotices = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/notices");
+      const res = await axios.get("https://ecp-backend.onrender.com/api/notices");
       setNotices(res.data);
     } catch (error) {
       console.error("Error fetching notices", error);
@@ -30,7 +30,7 @@ const AdminNotice = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/notices", form);
+      await axios.post("https://ecp-backend.onrender.com/api/notices", form);
       setSnackbarMessage("Notice posted successfully");
       setSnackbarSeverity("success");
       setSnackbarOpen(true);
@@ -45,7 +45,7 @@ const AdminNotice = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/notices/${id}`);
+      await axios.delete(`https://ecp-backend.onrender.com/api/notices/${id}`);
       setNotices(notices.filter((notice) => notice._id !== id)); // Remove deleted notice from state
       setSnackbarMessage("Notice deleted successfully");
       setSnackbarSeverity("success");

@@ -26,7 +26,7 @@ const StudentNotices = () => {
   useEffect(() => {
     const fetchNotices = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/notices");
+        const res = await axios.get("https://ecp-backend.onrender.com/api/notices");
         const currentTime = new Date();
         
         // Remove expired notices

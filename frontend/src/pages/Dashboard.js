@@ -16,7 +16,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/stats")
+      .get("https://ecp-backend.onrender.com/api/stats")
       .then((response) => {
         setStats(response.data);
         setLoading(false);

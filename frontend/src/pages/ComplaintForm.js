@@ -27,7 +27,7 @@ const ComplaintForm = () => {
 
   const fetchComplaints = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/complaints");
+      const res = await axios.get("https://ecp-backend.onrender.com/api/complaints");
       setComplaints(res.data);
     } catch (error) {
       console.error("Error fetching complaints", error);
@@ -41,7 +41,7 @@ const ComplaintForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/complaints", form);
+      await axios.post("https://ecp-backend.onrender.com/api/complaints", form);
       setSnackbar({ open: true, message: "Complaint submitted successfully", severity: "success" });
       setForm({ studentName: "", topic: "", description: "" });
       fetchComplaints(); // Refresh the complaint list

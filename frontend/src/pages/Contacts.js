@@ -19,7 +19,7 @@ const Contacts = () => {
   useEffect(() => {
     const fetchContacts = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/emergency-contacts");
+        const res = await axios.get("https://ecp-backend.onrender.com/api/emergency-contacts");
         setContacts(res.data);
       } catch (error) {
         console.error("Error fetching contacts", error);
@@ -37,7 +37,7 @@ const Contacts = () => {
 
     try {
       const newContact = { name, phone, email };
-      await axios.post("http://localhost:5000/api/emergency-contacts", newContact);
+      await axios.post("https://ecp-backend.onrender.com/api/emergency-contacts", newContact);
       setContacts([...contacts, newContact]);
       setName("");
       setPhone("");
@@ -51,7 +51,7 @@ const Contacts = () => {
   // Delete a contact
   const handleDeleteContact = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/emergency-contacts/${id}`);
+      await axios.delete(`https://ecp-backend.onrender.com/api/emergency-contacts/${id}`);
       setContacts(contacts.filter((contact) => contact._id !== id));
     } catch (error) {
       alert("Error deleting contact");
