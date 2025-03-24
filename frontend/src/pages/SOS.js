@@ -18,7 +18,7 @@ const SOS = () => {
 
   const fetchAlerts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/sos");
+      const res = await axios.get("https://ecp-backend.onrender.com/api/sos");
       setAlerts(res.data);
     } catch (error) {
       console.error("Error fetching SOS alerts", error);
@@ -33,7 +33,7 @@ const SOS = () => {
 
     try {
       setLoading(true);
-      await axios.post("http://localhost:5000/api/sos", { studentName });
+      await axios.post("https://ecp-backend.onrender.com/api/sos", { studentName });
       alert("🚨 SOS alert sent successfully!");
       fetchAlerts();
 
