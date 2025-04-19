@@ -45,7 +45,7 @@ const GeoTracking = () => {
     const message = encodeURIComponent(
       `🚨 EMERGENCY: I am in danger, please help! My live location: https://www.google.com/maps?q=${location.lat},${location.lng}`
     );
-    window.open(`https://wa.me/8754124935?text=${message}`, "_blank");
+    window.open(`https://wa.me/+918754124935?text=${message}`, "_blank");
   };
 
   return (
